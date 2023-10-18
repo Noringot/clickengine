@@ -13,9 +13,9 @@ function route(string $path, callable $callback): void
 
 route('/', function () {
     if (AuthController::isLogin()) {
-        header("Location: " . $_SERVER["HTTP_HOST"] . "/pages/home.php");
+        header("Location: " . "/pages/home.php");
     }
-    header("Location: " . $_SERVER["HTTP_HOST"] . "/pages/signup.php");
+    header("Location: " . "/pages/signup.php");
 });
 
 route('/auth/login', function () {
@@ -46,7 +46,7 @@ route('/auth/register', function () {
 
 route('/auth/logout', function () {
     unset($_SESSION["user"]);
-    header("Location: " . $_SERVER["HTTP_HOST"]);
+    header("Location: /");
 });
 
 route('/404', function () {

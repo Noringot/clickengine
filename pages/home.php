@@ -3,7 +3,7 @@ require_once __DIR__ . '/../app.php';
 session_start();
 
 if (!AuthController::isLogin()) {
-    header("Location: " . $_SERVER["HTTP_HOST"]);
+    header("Location: /");
 }
 
 $user =  AuthController::user();
@@ -22,7 +22,7 @@ $user =  AuthController::user();
     <h1>Home page</h1>
     <p>Name: <?= $user["name"] ?></p>
     <p>Email: <?= $user["email"] ?></p>
-    <form action="<?= $_SERVER["HTTP_HOST"] . "/auth/logout" ?>" method="post">
+    <form action="<?= "/auth/logout" ?>" method="post">
         <button type="submit">Logout</button>
     </form>
 </body>

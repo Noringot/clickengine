@@ -3,7 +3,7 @@ session_start();
 require_once __DIR__ . '/../app.php';
 
 if (AuthController::isLogin()) {
-    header("Location: " . "http://" . $_SERVER["HTTP_HOST"] . "/pages/home.php");
+    header("Location: " . "/pages/home.php");
 }
 
 ?>
@@ -21,7 +21,7 @@ if (AuthController::isLogin()) {
 <body>
     <h1>SignIn page</h1>
 
-        <form class="form" action="<?= $_SERVER["HTTP_HOST"] . "/auth/login"?>" method="post">
+        <form class="form" action="<?= "/auth/login"?>" method="post">
             <div class="form__field form__email">
                 <label for="email">Email</label>
                 <input type="email" name="email" id="email">
