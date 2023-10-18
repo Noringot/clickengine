@@ -6,4 +6,4 @@ const DB_USER = "root";
 const DB_PASSWORD = "root";
 const DB_NAME = "clickengine";
 
-const URL = "http://localhost:8888/";
+define("URL", $_SERVER["HTTP_HOST"]);

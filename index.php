@@ -1,7 +1,6 @@
 <?php
 session_start();
-print_r($_SERVER);
-die();
+
 require_once 'app.php';
 
 $routes = [];
