@@ -5,5 +5,3 @@ const DB_PORT = "3306";
 const DB_USER = "root";
 const DB_PASSWORD = "root";
 const DB_NAME = "clickengine";
-
-define("URL", $_SERVER["HTTP_HOST"]) . "/";
