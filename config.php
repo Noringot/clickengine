@@ -6,4 +6,4 @@ const DB_USER = "root";
 const DB_PASSWORD = "root";
 const DB_NAME = "clickengine";
 
-define("URL", $_SERVER["HTTP_HOST"]);
+define("URL", $_SERVER["HTTP_HOST"]) . "/";
