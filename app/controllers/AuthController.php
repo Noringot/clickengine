@@ -21,7 +21,7 @@ class AuthController extends Controller
         if (hash("sha256", $pass) == $r["password"]) {
             $_SESSION["user"]["name"] = $r["name"];
             $_SESSION["user"]["email"] = $email;
-            header("Location: " . $_SERVER["HTTP_HOST"] . "/pages/home.php");
+            header("Location: /pages/home.php");
         } else {
             echo "Incorrect email or password";
         }
@@ -33,7 +33,7 @@ class AuthController extends Controller
         $conn = self::getConn();
         $q = $conn->prepare("INSERT INTO users (name, email, password) VALUES (:name, :email, :password)");
         $q->execute(['name' => $request["name"], 'email' => $request['email'], 'password' => $hashPass]);
-        header("Location: " . $_SERVER["HTTP_HOST"] . "/pages/signin.php");
+        header("Location: /pages/signin.php");
     }
 
     public static function user(): array
